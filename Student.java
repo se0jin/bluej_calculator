@@ -7,19 +7,27 @@
 public class Student {
     private String name;
     private String studentId;
+    private String gugudan;
 
     public Student(String name, String studentId) {
         this.name = name;
         this.studentId = studentId;
+        this.gugudan ="";
     }
-
+    public String getName()
+    {
+        return this.name;
+    }
+    public String getStudentId()
+    {
+        return this.studentId;
+    }
     public void answerGugudan(int dan) {
-        for (int i = 1; i <= 9; i++) {
-            System.out.print(dan + "x" + i + "=" + (dan * i));
-            if (i < 9) {
-                System.out.print("  ");
-            }
+        this.gugudan = "";
+        for(int i =1; i<=9; i++){
+            int result = dan * i;
+            this.gugudan = this.gugudan + dan + "x" + i + "=" + result + "   ";
         }
-        System.out.println("\n");
+        System.out.println(this.name + "(" + this.studentId + "): " + this.gugudan);
     }
 }

@@ -6,10 +6,10 @@
  */
 public class Student {
     private String name;
-    private String studentId;
+    private int studentId;
     private String gugudan;
 
-    public Student(String name, String studentId) {
+    public Student(String name, int studentId) {
         this.name = name;
         this.studentId = studentId;
         this.gugudan ="";
@@ -18,7 +18,7 @@ public class Student {
     {
         return this.name;
     }
-    public String getStudentId()
+    public int getStudentId()
     {
         return this.studentId;
     }

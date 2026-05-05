@@ -9,10 +9,10 @@ import java.util.Scanner;
 
 public class MyApp {
     public static void main(String[] args) {
-        Student jenna = new Student("Jenna", "2401");
-        Student john  = new Student("John",  "2402");
-        Student maria = new Student("Maria", "2403");
-        Student james = new Student("James", "2404");
+        Student jenna = new Student("Jenna", 2401);
+        Student john  = new Student("John",  2402);
+        Student maria = new Student("Maria", 2403);
+        Student james = new Student("James", 2404);
 
         Scanner scan = new Scanner(System.in);
         System.out.print("누구에게 물어볼까요? (" + jenna.getName() + "/" + john.getName() + "/" + maria.getName() + "/" + james.getName() + "): ");

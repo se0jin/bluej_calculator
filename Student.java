@@ -6,9 +6,9 @@
  */
 public class Student {
     private String name;
-    private int studentId;
+    private String studentId;
 
-    public Student(String name, int studentId) {
+    public Student(String name, String studentId) {
         this.name = name;
         this.studentId = studentId;
     }
@@ -16,7 +16,7 @@ public class Student {
     {
         return this.name;
     }
-    public int getStudentId()
+    public String getStudentId()
     {
         return this.studentId;
     }

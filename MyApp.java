@@ -9,10 +9,10 @@ import java.util.Scanner;
 
 public class MyApp {
     public static void main(String[] args) {
-        Student jenna = new Student("Jenna", 2401);
-        Student john  = new Student("John",  2402);
-        Student maria = new Student("Maria", 2403);
-        Student james = new Student("James", 2404);
+        Student jenna = new Student("JENNA", "R005");
+        Student john  = new Student("JOHN",  "R010");
+        Student maria = new Student("MARIA", "R029");
+        Student james = new Student("JAMES", "R009");
 
         Scanner scan = new Scanner(System.in);
         System.out.print("누구에게 물어볼까요? (" + jenna.getName() + "/" + john.getName() + "/" + maria.getName() + "/" + james.getName() + "): ");
@@ -20,16 +20,16 @@ public class MyApp {
         System.out.print("몇단을 물어볼까요?");
         int dan = scan.nextInt();
         switch (name) {
-            case "Jenna":
+            case "JENNA":
                 jenna.answerGugudan(dan);
                 break;
-            case "John":
+            case "JOHN":
                 john.answerGugudan(dan);
                 break;
-            case "Maria":
+            case "MARIA":
                 maria.answerGugudan(dan);
                 break;
-            case "James":
+            case "JAMES":
                 james.answerGugudan(dan);
                 break;
             default:

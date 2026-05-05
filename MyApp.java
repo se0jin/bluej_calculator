@@ -10,26 +10,32 @@ import java.util.Scanner;
 public class MyApp {
     public static void main(String[] args) {
         Student jenna = new Student("Jenna", "2401");
-        Student mike  = new Student("Mike",  "2402");
-        Student sara  = new Student("Sara",  "2403");
-        Student tom   = new Student("Tom",   "2404");
+        Student john  = new Student("John",  "2402");
+        Student maria = new Student("Maria", "2403");
+        Student james = new Student("James", "2404");
 
         Scanner scan = new Scanner(System.in);
-        System.out.print("누구에게 물어볼까요? (Jenna/Mike/Sara/Tom): ");
+        System.out.print("누구에게 물어볼까요? (" + jenna.getName() + "/" + john.getName() + "/" + maria.getName() + "/" + james.getName() + "): ");
         String name = scan.nextLine();
         System.out.print("몇단을 물어볼까요?");
         int dan = scan.nextInt();
 
-        if (name.equals("Jenna")) {
-            jenna.answerGugudan(dan);
-        } else if (name.equals("Mike")) {
-            mike.answerGugudan(dan);
-        } else if (name.equals("Sara")) {
-            sara.answerGugudan(dan);
-        } else if (name.equals("Tom")) {
-            tom.answerGugudan(dan);
-        } else {
-            System.out.println("없는 학생이에요!");
+        switch (name) {
+            case "Jenna":
+                jenna.answerGugudan(dan);
+                break;
+            case "John":
+                john.answerGugudan(dan);
+                break;
+            case "Maria":
+                maria.answerGugudan(dan);
+                break;
+            case "James":
+                james.answerGugudan(dan);
+                break;
+            default:
+                System.out.println("없는 학생이에요!");
+                break;
         }
         scan.close();
     }

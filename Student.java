@@ -14,7 +14,6 @@ public class Student {
         this.studentId = studentId;
     }
     public void answerGugudan(int dan) {
-        System.out.print(this.name + "(" + this.studentId + ")에게, \"" + dan + "단을 답해주세요~\" 라고 질문하면,\n\"");
         for (int i = 1; i <= 9; i++) {
             System.out.print(dan + "x" + i + "=" + (dan * i));
             if (i < 9) {

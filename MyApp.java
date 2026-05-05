@@ -1,33 +1,36 @@
-
+import java.util.Scanner;
 /**
- * MyApp 클래스의 설명을 작성하세요.
+ * MyApp 실행 클래스
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author (2팀)
+ * @version (2026.05.05)
  */
 public class MyApp
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
-    private int x;
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        
+        Student jenna = new Student("Jenna", "12345");
+        Student john = new Student("John", "12346");
+        Student maria = new Student("Maria", "12347");
+        Student james = new Student("James", "12348");
+        
+        System.out.print("Jenna에게 질문할 단을 입력하세요>> ");
+        int dan1 = scan.nextInt();
+        jenna.answerGugudan(dan1); 
 
-    /**
-     * MyApp 클래스의 객체 생성자
-     */
-    public MyApp()
-    {
-        // 인스턴스 변수 초기화
-        x = 0;
-    }
+        System.out.print("John에게 질문할 단을 입력하세요>> ");
+        int dan2 = scan.nextInt();
+        john.answerGugudan(dan2);
 
-    /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
-     */
-    public int sampleMethod(int y)
-    {
-        // 여기에 코드를 작성하세요.
-        return x + y;
+        System.out.print("Maria에게 질문할 단을 입력하세요>> ");
+        int dan3 = scan.nextInt();
+        maria.answerGugudan(dan3);
+
+        System.out.print("James에게 질문할 단을 입력하세요>> ");
+        int dan4 = scan.nextInt();
+        james.answerGugudan(dan4);
+        
+        scan.close();
     }
 }

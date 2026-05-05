@@ -1,30 +1,24 @@
 /**
- * Student 클래스
- * 속성: 이름(name), 학번(studentId)
- * 기능: 구구단 출력 (GugudanCalculator)
+ * Student 학생 객체 클래스
+ *
+ * @author (2팀)
+ * @version (2026.05.05)
  */
 public class Student {
-    private String name;
-    private String studentId;
+    private String name;      
+    private String studentId; 
 
     public Student(String name, String studentId) {
         this.name = name;
         this.studentId = studentId;
     }
-
-    public void GugudanCalculator(int dan) {
-        System.out.println(name + "이(가) " + dan + "단을 답합니다:");
+    public void answerGugudan(int dan) {
         for (int i = 1; i <= 9; i++) {
-            System.out.println(dan + " x " + i + " = " + (dan * i));
+            System.out.print(dan + "x" + i + "=" + (dan * i));
+            if (i < 9) {
+                System.out.print("  ");
+            }
         }
-        System.out.println(); 
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getStudentId() {
-        return studentId;
+        System.out.println("\n");
     }
 }

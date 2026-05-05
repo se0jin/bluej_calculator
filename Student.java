@@ -26,6 +26,6 @@ public class Student {
             int result = dan * i;
             gugudan = gugudan + dan + "x" + i + "=" + result + "   ";
         }
-        System.out.println(this.name + "(" + this.studentId + "): " + gugudan);
+        System.out.println(this.name + ": " + gugudan);
     }
 }

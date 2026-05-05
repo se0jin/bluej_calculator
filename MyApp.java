@@ -15,8 +15,16 @@ public class MyApp {
         Student james = new Student("JAMES", "R009");
 
         Scanner scan = new Scanner(System.in);
-        System.out.print("누구에게 물어볼까요? (" + jenna.getName() + "/" + john.getName() + "/" + maria.getName() + "/" + james.getName() + "): ");
-        String name = scan.nextLine();
+        String name = "";
+        while(true) {
+            System.out.print("누구에게 물어볼까요? (" + jenna.getName() + "/" + john.getName() + "/" + maria.getName() + "/" + james.getName() + "): ");
+            name = scan.nextLine();
+            if (name.equals("JENNA") || name.equals("JOHN") || name.equals("MARIA") || name.equals("JAMES")) {
+                break;
+            } else {
+                System.out.println("없는 학생입니다. 이름을 다시 입력해주세요.\n");
+            }
+        }
         System.out.print("몇단을 물어볼까요?");
         int dan = scan.nextInt();
         switch (name) {
@@ -33,7 +41,7 @@ public class MyApp {
                 james.CalculateGugudan(dan);
                 break;
             default:
-                System.out.println("없는 학생이에요!");
+                System.out.println("오류가 발생했습니다.");
                 break;
         }
         scan.close();

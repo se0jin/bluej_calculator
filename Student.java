@@ -7,12 +7,10 @@
 public class Student {
     private String name;
     private int studentId;
-    private String gugudan;
 
     public Student(String name, int studentId) {
         this.name = name;
         this.studentId = studentId;
-        this.gugudan ="";
     }
     public String getName()
     {
@@ -23,11 +21,11 @@ public class Student {
         return this.studentId;
     }
     public void answerGugudan(int dan) {
-        this.gugudan = "";
-        for(int i =1; i<=9; i++){
+        String gugudan = ""; 
+        for(int i = 1; i <= 9; i++){
             int result = dan * i;
-            this.gugudan = this.gugudan + dan + "x" + i + "=" + result + "   ";
+            gugudan = gugudan + dan + "x" + i + "=" + result + "   ";
         }
-        System.out.println(this.name + "(" + this.studentId + "): " + this.gugudan);
+        System.out.println(this.name + "(" + this.studentId + "): " + gugudan);
     }
 }

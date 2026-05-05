@@ -19,7 +19,6 @@ public class MyApp {
         String name = scan.nextLine();
         System.out.print("몇단을 물어볼까요?");
         int dan = scan.nextInt();
-
         switch (name) {
             case "Jenna":
                 jenna.answerGugudan(dan);

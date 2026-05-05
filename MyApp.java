@@ -21,16 +21,16 @@ public class MyApp {
         int dan = scan.nextInt();
         switch (name) {
             case "JENNA":
-                jenna.answerGugudan(dan);
+                jenna.CalculateGugudan(dan);
                 break;
             case "JOHN":
-                john.answerGugudan(dan);
+                john.CalculateGugudan(dan);
                 break;
             case "MARIA":
-                maria.answerGugudan(dan);
+                maria.CalculateGugudan(dan);
                 break;
             case "JAMES":
-                james.answerGugudan(dan);
+                james.CalculateGugudan(dan);
                 break;
             default:
                 System.out.println("없는 학생이에요!");

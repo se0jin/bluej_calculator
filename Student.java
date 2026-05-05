@@ -20,7 +20,7 @@ public class Student {
     {
         return this.studentId;
     }
-    public void answerGugudan(int dan) {
+    public void CalculateGugudan(int dan) {
         String gugudan = ""; 
         for(int i = 1; i <= 9; i++){
             int result = dan * i;

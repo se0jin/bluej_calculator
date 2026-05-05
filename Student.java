@@ -1,33 +1,30 @@
-
 /**
- * Student 클래스의 설명을 작성하세요.
- *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * Student 클래스
+ * 속성: 이름(name), 학번(studentId)
+ * 기능: 구구단 출력 (GugudanCalculator)
  */
-public class Student
-{
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
-    private int x;
+public class Student {
+    private String name;
+    private String studentId;
 
-    /**
-     * Student 클래스의 객체 생성자
-     */
-    public Student()
-    {
-        // 인스턴스 변수 초기화
-        x = 0;
+    public Student(String name, String studentId) {
+        this.name = name;
+        this.studentId = studentId;
     }
 
-    /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
-     */
-    public int sampleMethod(int y)
-    {
-        // 여기에 코드를 작성하세요.
-        return x + y;
+    public void GugudanCalculator(int dan) {
+        System.out.println(name + "이(가) " + dan + "단을 답합니다:");
+        for (int i = 1; i <= 9; i++) {
+            System.out.println(dan + " x " + i + " = " + (dan * i));
+        }
+        System.out.println(); 
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getStudentId() {
+        return studentId;
     }
 }
